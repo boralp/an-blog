@@ -36,5 +36,5 @@ if ($page->data->title === $blogname) {
 		}
 	}
 }
-echo "</main><footer><p>", $sitename, " &copy; ", date("Y"), " | Powered by <a href=\"https://github.com/boralp/divless\" target=\"_blank\">{divless}</a>.</p></footer></body></html>";
+echo "</main><footer><p>", $sitename, " &copy; ", date("Y"), " | Powered by <a href=\"https://github.com/boralp/divless\" target=\"_blank\">{divless}</a>. (", round(microtime(true) - $_SERVER["REQUEST_TIME_FLOAT"], 4), " seconds)</p></footer></body></html>";
 ?>

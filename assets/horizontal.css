@@ -1,0 +1,39 @@
+html,
+body {
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+    background: #f6f6ef;
+}
+body {
+    font: normal normal 1.6rem/100% "Avenir Light", Helvetica, Arial, sans-serif;
+	line-height: 3rem;
+	color: #222;
+}
+a {
+    text-decoration: none;
+    color: #3F51B5;
+}
+header {
+    background: #3F51B5;
+}
+header a {
+    color: #fff;
+	padding: 1.5rem 2.5rem;
+	display: inline-block;
+}
+header a:first-child {
+    border-right: 1px solid rgba(170, 170, 170, 0.2);
+	padding-left: 0;
+}
+nav, main {
+    margin: 0 auto 6rem;
+	position: relative;
+	max-width: 72rem;
+}
+main {
+	font-family: "New Caledonia Semibold", Georgia, "Times New Roman", serif;
+}
+article {
+	border-bottom: 1px solid rgba(170, 170, 170, 0.8);
+}

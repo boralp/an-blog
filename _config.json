@@ -1,0 +1,28 @@
+{
+    "base": "http://localhost:3000/",
+    "title": "Bora Alp Arat",
+    "description": "Entrepreneur, developer, b.b.a., arat.net, atatek corp.",
+    "index": "home",
+    "404": "404",
+    "temp": "vertical",
+    "social": {
+        "facebook": "https://www.facebook.com/boraalparat",
+        "twitter": "https://twitter.com/boralp",
+        "github": "https://github.com/boralp",
+        "instagram": "https://www.instangram.com/boraalparat",
+        "linkedin": "https://www.linkedin.com/in/boralp",
+        "email": "bora@arat.net"
+    },
+    "menu": {
+        "primary": [
+            "home",
+            "about",
+            "contact"
+        ],
+        "footer": [
+            "home",
+            "contact"
+        ]
+    },
+    "footer": "Powered by AN Blog."
+}

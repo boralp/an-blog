@@ -11,6 +11,7 @@ if (!file_exists($page)) {
     header('HTTP/1.0 404 Not Found');
     $page = __DIR__.'/items/'.$conf['404'].'.md';
 }
+$title = str_replace('#', '', fgets(fopen($page, 'r'))) . ' - ';
 $page = Parsedown::instance()->text(file_get_contents($page));
 foreach ($conf['menu'] as $menuw => $menus) {
     if (preg_match('/{#'.$menuw.'_menu}(.*?){\/#'.$menuw.'_menu}/', $temp, $menu)) {
@@ -34,9 +35,9 @@ if ($link === $conf['index']) {
 }
 $temp = strtr($temp, [
     '{body}' => $page,
-    '{title}' => $conf['title'],
+    '{title}' => ($link !== $conf['index'] ? $title:'') . $conf['title'],
     '{description}' => $conf['description'],
     '{year}' => date('Y'),
-	'{generated}' => round(microtime(true) - $_SERVER['REQUEST_TIME_FLOAT'], 4),
+    '{generated}' => round(microtime(true) - $_SERVER['REQUEST_TIME_FLOAT'], 4),
 ]);
 echo str_replace(["\t", "\n", "\r"], '', $temp);

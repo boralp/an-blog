@@ -1,0 +1,76 @@
+html,
+body {
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+    background: #f6f6ef;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+*,
+::after,
+::before {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit
+}
+body {
+    font: normal normal 1.6rem/100% "Avenir Next", Avenir, Segoe UI, "Helvetica Neue", helvetica, sans-serif;
+    line-height: 3rem;
+    color: #222;
+}
+a {
+    text-decoration: none;
+    color: #1da1f2;
+}
+header {
+    width: 30%;
+    height: 100%;
+    float: left;
+    background: #282b31;
+    position: fixed;
+    padding: 6rem;
+}
+header h1 small {
+    display: block;
+    margin-top: 2rem;
+    font-size: 60%;
+}
+header a {
+    color: #fff;
+    padding: 0.5rem 0;
+    display: block;
+}
+header nav a {
+	border-left: 4px solid #fff;
+	margin: 2rem 0;
+	padding-left: 2rem;
+}
+header nav a:hover,
+header nav a:active {
+	border-left-color: #1da1f2;
+}
+main {
+    width: 70%;
+    margin-left: 30%;
+    float: left;
+    padding: 8rem;
+	font-size: 1.8rem;
+    font-family: "Baskerville", "New Caledonia Semibold", Georgia, "Times New Roman", serif;
+}
+footer {
+    width: 70%;
+    float: right;
+    padding: 0 8rem 8rem;
+}
+footer p:first-child {
+    padding: 4rem 0;
+    border-top: 1px solid #aaa;
+}
+article {
+    border-top: 1px solid rgba(170, 170, 170, 0.8);
+}
+img {
+	max-width: 100%;
+	height: auto;
+}

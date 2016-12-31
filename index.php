@@ -34,6 +34,7 @@ if ($link === $conf['index']) {
     }
 }
 $temp = strtr($temp, [
+	'{base}' => $conf['base'],
     '{body}' => $page,
     '{title}' => ($link !== $conf['index'] ? $title:'') . $conf['title'],
     '{description}' => $conf['description'],

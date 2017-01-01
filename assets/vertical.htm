@@ -11,15 +11,15 @@
 
 <body>
 	<header>
-		<a href="/">
+		<a href="{base}">
 			<h1>
-				{title}
+				{page_title}
 				<small>{description}</small>
 			</h1>
 		</a>
 		<nav>
 			{#primary_menu}
-			<a href="{primary_link}">{primary_title}</a>
+			<a href="{base}{primary_link}">{primary_title}</a>
 			{/#primary_menu}
 		</nav>
 	</header>
@@ -28,9 +28,9 @@
 	</main>
 	<footer>
 		{#footer_menu}
-		<a href="{footer_link}">{footer_title}</a> | 
+		<a href="{base}{footer_link}">{footer_title}</a> |
 		{/#footer_menu}
-		<p>{title} &copy; {year} ({generated} seconds)</p>
+		<p>{page_title} &copy; {year} ({generated} seconds)</p>
 	</footer>
 </body>
 

@@ -26,7 +26,7 @@ foreach ($conf['menu'] as $menuw => $menus) {
     }
 }
 if ($link === $conf['index']) {
-    foreach (glob(__DIR__.'/items/20*.md', GLOB_BRACE) as $file) {
+    foreach (array_reverse(glob(__DIR__.'/items/20*.md', GLOB_BRACE)) as $file) {
         $page .= strtr(file_get_contents(__DIR__.'/assets/_article.htm'), [
             '{article_title}' => str_replace('#', '', fgets(fopen($file, 'r'))),
             '{article_path}' => str_replace([__DIR__.'/items/', '.md'], '', $file),

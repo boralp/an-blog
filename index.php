@@ -1,11 +1,7 @@
-<?php
-
 require __DIR__.'/parsedown.inc';
 $conf = json_decode(file_get_contents(__DIR__.'/_config.json'), true);
-$temp = file_get_contents(__DIR__.'/assets/'.$conf['temp'].'.htm');
-$temp = str_replace(["\t", "\n", "\r"], '', $temp);
-$link = 'http' . ($_SERVER['HTTPS'] ?? '' === 'on' ? 's' : '') . '://' . $_SERVER['SERVER_NAME'] . (!in_array($_SERVER['SERVER_PORT'], ['80', '443']) ? ':' . $_SERVER['SERVER_PORT'] : '') . $_SERVER['REQUEST_URI'];
-$link = strtr(trim($link, '/'), [$conf['base'] => '', '/' => '-']);
+$temp = str_replace(["\t", "\n", "\r"], '', file_get_contents(__DIR__.'/assets/'.$conf['temp'].'.htm'));
+$link = trim(strtr('http' . ($_SERVER['HTTPS'] ?? '' === 'on' ? 's' : '') . '://' . $_SERVER['SERVER_NAME'] . (!in_array($_SERVER['SERVER_PORT'], ['80', '443']) ? ':' . $_SERVER['SERVER_PORT'] : '') . $_SERVER['REQUEST_URI'], [$conf['base'] => '', '/' => '-']), '-');
 $link = ($link === '' ? $conf['index'] : $link);
 $page = __DIR__.'/items/'.$link.'.md';
 if (!file_exists($page)) {

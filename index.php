@@ -1,3 +1,5 @@
+<?php
+
 require __DIR__.'/parsedown.inc';
 $conf = json_decode(file_get_contents(__DIR__.'/_config.json'), true);
 $temp = str_replace(["\t", "\n", "\r"], '', file_get_contents(__DIR__.'/assets/'.$conf['temp'].'.htm'));
